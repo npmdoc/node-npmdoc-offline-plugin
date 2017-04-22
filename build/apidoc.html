@@ -1,0 +1,461 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/NekR/offline-plugin"
+
+    >offline-plugin (v4.7.0)</a>
+</h1>
+<h4>offline-plugin for webpack</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.offline-plugin">module offline-plugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.runtime_loader">
+            function <span class="apidocSignatureSpan">offline-plugin.</span>runtime_loader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.sw_loader">
+            function <span class="apidocSignatureSpan">offline-plugin.</span>sw_loader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">offline-plugin.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.offline-plugin.runtime_loader">module offline-plugin.runtime_loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.runtime_loader.runtime_loader">
+            function <span class="apidocSignatureSpan">offline-plugin.</span>runtime_loader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.runtime_loader.pitch">
+            function <span class="apidocSignatureSpan">offline-plugin.runtime_loader.</span>pitch
+            <span class="apidocSignatureSpan">(remainingRequest, precedingRequest, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.offline-plugin.sw_loader">module offline-plugin.sw_loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.sw_loader.sw_loader">
+            function <span class="apidocSignatureSpan">offline-plugin.</span>sw_loader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.sw_loader.pitch">
+            function <span class="apidocSignatureSpan">offline-plugin.sw_loader.</span>pitch
+            <span class="apidocSignatureSpan">(remainingRequest, precedingRequest, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.offline-plugin.utils">module offline-plugin.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.utils.getSource">
+            function <span class="apidocSignatureSpan">offline-plugin.utils.</span>getSource
+            <span class="apidocSignatureSpan">(_source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.utils.hasMagic">
+            function <span class="apidocSignatureSpan">offline-plugin.utils.</span>hasMagic
+            <span class="apidocSignatureSpan">(pattern, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.utils.interpolateString">
+            function <span class="apidocSignatureSpan">offline-plugin.utils.</span>interpolateString
+            <span class="apidocSignatureSpan">(string, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.utils.isAbsolutePath">
+            function <span class="apidocSignatureSpan">offline-plugin.utils.</span>isAbsolutePath
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.offline-plugin.utils.isAbsoluteURL">
+            function <span class="apidocSignatureSpan">offline-plugin.utils.</span>isAbsoluteURL
+            <span class="apidocSignatureSpan">(url)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.offline-plugin" id="apidoc.module.offline-plugin">module offline-plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.runtime_loader" id="apidoc.element.offline-plugin.runtime_loader">
+        function <span class="apidocSignatureSpan">offline-plugin.</span>runtime_loader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runtime_loader = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.sw_loader" id="apidoc.element.offline-plugin.sw_loader">
+        function <span class="apidocSignatureSpan">offline-plugin.</span>sw_loader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sw_loader = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.offline-plugin.runtime_loader" id="apidoc.module.offline-plugin.runtime_loader">module offline-plugin.runtime_loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.runtime_loader.runtime_loader" id="apidoc.element.offline-plugin.runtime_loader.runtime_loader">
+        function <span class="apidocSignatureSpan">offline-plugin.</span>runtime_loader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runtime_loader = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.runtime_loader.pitch" id="apidoc.element.offline-plugin.runtime_loader.pitch">
+        function <span class="apidocSignatureSpan">offline-plugin.runtime_loader.</span>pitch
+        <span class="apidocSignatureSpan">(remainingRequest, precedingRequest, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pitch = function (remainingRequest, precedingRequest, data) {
+  this.cacheable &#x26;&#x26; this.cacheable();
+
+  var callback = this.async();
+  var params = JSON.parse(this.query.slice(1));
+  var templatePath = path.join(__dirname, &#x27;../../tpls/runtime-template.js&#x27;);
+
+  this.addDependency(templatePath);
+
+  fs.readFile(templatePath, &#x27;utf-8&#x27;, function (err, template) {
+    if (err) return callback(err);
+
+    template = ejs.render(template, params);
+    callback(null, template);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.offline-plugin.sw_loader" id="apidoc.module.offline-plugin.sw_loader">module offline-plugin.sw_loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.sw_loader.sw_loader" id="apidoc.element.offline-plugin.sw_loader.sw_loader">
+        function <span class="apidocSignatureSpan">offline-plugin.</span>sw_loader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sw_loader = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.sw_loader.pitch" id="apidoc.element.offline-plugin.sw_loader.pitch">
+        function <span class="apidocSignatureSpan">offline-plugin.sw_loader.</span>pitch
+        <span class="apidocSignatureSpan">(remainingRequest, precedingRequest, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pitch(remainingRequest, precedingRequest, data) {
+  var _this = this;
+
+  this.cacheable &#x26;&#x26; this.cacheable();
+
+  var callback = this.async();
+  var templatePath = path.join(__dirname, &#x27;sw-template.js&#x27;);
+  var query = loaderUtils.parseQuery(this.query);
+  var params = JSON.parse(query.json);
+
+  var request = loaderUtils.stringifyRequest(this, remainingRequest);
+  var source = &#x27;module.exports = require(&#x27; + request + &#x27;)&#x27;;
+
+  var loaders = (params.loaders || []).map(function (loader) {
+    var loaderPath = path.join(__dirname, &#x27;../loaders&#x27;, loader + &#x27;.js&#x27;);
+    var loaderRequest = loaderUtils.stringifyRequest(_this, &#x27;!!&#x27; + loaderPath);
+
+    _this.addDependency(loaderPath);
+
+    return JSON.stringify(loader) + &#x27;: require(&#x27; + loaderRequest + &#x27;)&#x27;;
+  });
+
+  var cacheMaps = (params.cacheMaps || []).map(function (map) {
+    return &#x27;{\n      match: &#x27; + map.match + &#x27;,\n      to: &#x27; + map.to + &#x27;,\n      requestTypes: &#x27; + JSON.stringify(map.requestTypes
+) + &#x27;,\n    }&#x27;;
+  });
+
+  this.addDependency(templatePath);
+
+  var loadersCode = &#x27;{}&#x27;;
+
+  if (loaders.length) {
+    loadersCode = &#x27;{\n      &#x27; + loaders.join(&#x27;,\n&#x27;) + &#x27;\n    }&#x27;;
+  }
+
+  var cacheMapsCode = &#x27;[]&#x27;;
+
+  if (cacheMaps.length) {
+    cacheMapsCode = &#x27;[\n      &#x27; + cacheMaps.join(&#x27;,\n&#x27;) + &#x27;\n    ]&#x27;;
+  }
+
+  var helpersCode = [&#x27;, {&#x27;, &#x27;loaders: &#x27; + loadersCode + &#x27;,&#x27;, &#x27;cacheMaps: &#x27; + cacheMapsCode + &#x27;,&#x27;, &#x27;}&#x27;];
+
+  fs.readFile(templatePath, &#x27;utf-8&#x27;, function (err, template) {
+    if (err) return callback(err);
+
+    template = &#x27;\n      &#x27; + template + &#x27;\n      WebpackServiceWorker(&#x27; + params.data_var_name + helpersCode.join(&#x27;\n&#x27;) + &#x27;);\n      &#x27; +
+source + &#x27;\n    &#x27;;
+
+    callback(null, template);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.offline-plugin.utils" id="apidoc.module.offline-plugin.utils">module offline-plugin.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.utils.getSource" id="apidoc.element.offline-plugin.utils.getSource">
+        function <span class="apidocSignatureSpan">offline-plugin.utils.</span>getSource
+        <span class="apidocSignatureSpan">(_source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSource(_source) {
+  return {
+    source: function source() {
+      return _source;
+    },
+    size: function size() {
+      return Buffer.byteLength(_source, &#x27;utf8&#x27;);
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.utils.hasMagic" id="apidoc.element.offline-plugin.utils.hasMagic">
+        function <span class="apidocSignatureSpan">offline-plugin.utils.</span>hasMagic
+        <span class="apidocSignatureSpan">(pattern, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasMagic(pattern, options) {
+  var minimatch = new _minimatch.Minimatch(pattern, options);
+  var set = minimatch.set;
+
+  if (set.length &#x3e; 1) {
+    return minimatch;
+  }
+
+  for (var j = 0; j &#x3c; set[0].length; j++) {
+    if (typeof set[0][j] !== &#x27;string&#x27;) {
+      return minimatch;
+    }
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.utils.interpolateString" id="apidoc.element.offline-plugin.utils.interpolateString">
+        function <span class="apidocSignatureSpan">offline-plugin.utils.</span>interpolateString
+        <span class="apidocSignatureSpan">(string, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function interpolateString(string, data) {
+  var hasOwnProperty = ({}).hasOwnProperty;
+
+  return (string + &#x27;&#x27;).replace(/\[(\w+?)\]/g, function (match, key) {
+    if (hasOwnProperty.call(data, key)) {
+      return data[key];
+    }
+
+    return &#x27;&#x27;;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.utils.isAbsolutePath" id="apidoc.element.offline-plugin.utils.isAbsolutePath">
+        function <span class="apidocSignatureSpan">offline-plugin.utils.</span>isAbsolutePath
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isAbsolute(path) {
+  assertPath(path);
+  return path.length &#x3e; 0 &#x26;&#x26; path.charCodeAt(0) === 47/*/*/;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.offline-plugin.utils.isAbsoluteURL" id="apidoc.element.offline-plugin.utils.isAbsoluteURL">
+        function <span class="apidocSignatureSpan">offline-plugin.utils.</span>isAbsoluteURL
+        <span class="apidocSignatureSpan">(url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isAbsoluteURL(url) {
+  return (/^(?:\w+:)?\/\//.test(url)
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
